@@ -52,10 +52,10 @@ Redis is simple and performant
 
   - For storing uniq uniq values you can use `Set` structure. Set has all common operations like union joins intersect , etc.
 
-  - Common way for storing separate reccors of data but related to same domain like Users or Twits is by prefixing each record with `users:`. So sample user object can be stored as a key `users:{some_user_id}`. For quering such data you can use `keys` command with pattern, but it's not a recommended way. Better way will be to store user as a hashes, but if you need strctly this structure you can create separate `Set` that will hold user related keys. So then querining operation will be `O(x)` where `x` is `Set` length instead of `O(n)`
+  - Common way for storing separate records of data but related to same domain like Users or Twits is by prefixing each record with `users:`. So sample user object can be stored as a key `users:{some_user_id}`. For quering such data you can use `keys` command with pattern, but it's not a recommended way. Better way will be to store user as a hashes, but if you need strctly this structure you can create separate `Set` that will hold user related keys. So then querining operation will be `O(x)` where `x` is `Set` length instead of `O(n)`
   where `n` is global number of keys.
 
-  - There are lost of other recipes how to use Redis, but the beauty of Redis is that you can come with a way of how to you it that nobody thought about before. Redis is very flexible for all sorts of data storing operations.
+  - There are lots of other recipes how to use Redis, but the beauty of Redis is that you can come with a way of how to use it it that nobody thought about before
 
 
 #### Resouces
