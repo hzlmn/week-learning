@@ -39,7 +39,58 @@ Instead it store data in `Documents` with flexible schemas (each document can ha
 - Evaluate a javascript expression on the database:                                                     
                                                                                                         
   mongo --eval 'JSON.stringify(db.foo.findOne())' database                                              
-                                                              
+
+
+#### Mongo collection operations
+
+  - Find each document in collection
+  ```js
+  db.collection.find({})
+  ```
+
+   - Insert document into collection
+   > Note! use `insert_one` or `insert_many`, pure `insert` is supported but will be deprecated soon
+  ```js
+  // Insert single
+  db.collection.insert_one({ 'name': 'Oleh' })
+
+  //Insert many 
+  // Everything is ok due to flexible schema
+  db.collection.insert_many({'name': 'test'}, {'surname': 'test'})
+  ```
+
+   - Update document
+  ```js
+  db.collection.update(
+    { '_id': ObjectId('some object id') }, 
+    { '$set': {'data': 'updated_data'} }
+  )
+  ```
+
+   - Remove document from collection
+  ```js
+  db.collection.delete_one({ '_id': ObjectId('some_id') })
+  ```
+
+  More operationg can be found in docs
+
+
+#### Data Aggregation
+> TDB
+
+#### Data Relations
+> TBD
+
+
+#### Replication
+> TBD
+
+#### Sharding 
+> TDB
+
+#### Mongo clients
+
+  - `motor` async Python3 client for `asyncio` / `Tornado`                                                           
 
 #### Resources
 
