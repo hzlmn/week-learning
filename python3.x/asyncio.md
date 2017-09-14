@@ -27,4 +27,5 @@ asyncio EventLoop manage it and give back context when coroutine finished.
 #### Resources
 
   - `asyncio` [chapter](https://pymotw.com/3/asyncio/index.html) on Python3 module of the week
+  - http://asyncio.readthedocs.io/en/latest/index.html
   - Python `asyncio` official [documentation](https://docs.python.org/3/library/asyncio.html)
