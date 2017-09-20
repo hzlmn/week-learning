@@ -61,7 +61,9 @@ Instead it store data in `Documents` with flexible schemas (each document can ha
   
 
    - Insert document into collection
+   
    > Note! use `insert_one` or `insert_many`, pure `insert` is supported but will be deprecated soon
+
   ```js
   // Insert single
   db.collection.insert_one({ 'name': 'Oleh' })
@@ -130,11 +132,15 @@ Mongo allows storing of nested structures, one document's size is limited to 16m
   - Flexible schema
   - Logs
   - Storing nested structures ( eg. Three.js json models )
+  - Geospital data. Mongo support geoJSON and have powerful operators for it.
   - more ?
 
 
 #### Data Aggregation
-> TDB
+
+  Mongo has two powerful mechanism for data aggregation
+    - `aggregate` function
+    - MapReduce functions
 
 
 #### Replication
