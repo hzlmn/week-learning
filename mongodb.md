@@ -5,7 +5,7 @@
 
 `MongoDB` is document-oriented NoSQL storage system with flexible quering mechanism. 
 Being that said, it mean that MongoDB do not store data in old fashioned table oriented manner.
-Instead it store data in `Documents` with flexible schemas (each document can have uniq set of fields) and groups them in `Collections` that related to certain `database`. Mongo use `JavaScript` like language for perfoming query operations.
+Instead it store data in `Documents` with flexible schemas (each document can have uniq set of fields) and groups them in `Collections` that related to certain `database`. Mongo shell use `JavaScript` language for perfoming query operations.
 
 #### Usage
 
