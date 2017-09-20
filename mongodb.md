@@ -105,11 +105,24 @@ Instead it store data in `Documents` with flexible schemas (each document can ha
   More operationg can be found in docs
 
 
+#### Data Modeling
+> data modeling in NoSQL storages a bit different from traditional SQl based dbs.
+
+Most common pitfall that Mongo don't have join mechanism so instead of performing joins of collections you just create two separete queries for each piece of data.
+
+Mongo allows storing of nested structures, one document's size is limited to 16mb.
+
+
+### When to use Mongo
+
+  - Flexible schema
+  - Logs
+  - Storing nested structures ( eg. Three.js json models )
+  - more ?
+
+
 #### Data Aggregation
 > TDB
-
-#### Data Relations
-> TBD
 
 
 #### Replication
