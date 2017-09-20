@@ -44,9 +44,21 @@ Instead it store data in `Documents` with flexible schemas (each document can ha
 #### Mongo collection operations
 
   - Find each document in collection
+
   ```js
   db.collection.find({})
   ```
+
+  As an optional second parameter `find` accept projection.
+  Projection is a way of enabling or disabling certain fields in final data.
+  
+  
+  So for example, in such case we find all records and disable `_id` field
+  
+  ```js
+  db.collection.find({}, {'_id': 0})
+  ```
+  
 
    - Insert document into collection
    > Note! use `insert_one` or `insert_many`, pure `insert` is supported but will be deprecated soon
