@@ -79,7 +79,7 @@ Instead it store data in `Documents` with flexible schemas (each document can ha
   )
   ```
 
-  - Using operating with query
+  - Using operators with query
   ```js
   db.collection.update(
     { 'age': { '$gt': 21 } }, 
