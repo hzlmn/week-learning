@@ -67,6 +67,36 @@ Instead it store data in `Documents` with flexible schemas (each document can ha
   )
   ```
 
+  - Using operating with query
+  ```js
+  db.collection.update(
+    { 'age': { '$gt': 21 } }, 
+    { '$set': { 'data': 'some test data' } }
+  )
+  ```
+
+   - Updating multiple documents
+  ```js
+  db.collection.update(
+    { 'age': { '$gt': 21 } }, 
+    { '$set': { 'data': 'some test data' } },
+    { 'multi': true }
+  )
+  ```
+
+  - Using upserts
+
+  > Upserts useful for matching document and if it exists updating it or creating new one
+
+  ```js
+  db.collection.update(
+    { 'name': 'Oleh' }, 
+    { '$set': { 'data': 'some test data' } },
+    { 'upsert': true }
+  )
+  ```
+
+
    - Remove document from collection
   ```js
   db.collection.delete_one({ '_id': ObjectId('some_id') })
