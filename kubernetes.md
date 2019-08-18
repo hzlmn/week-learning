@@ -29,3 +29,18 @@ spec:
 - Set the image in the pod spec like the build tag (eg my-image)
 - Set the imagePullPolicy to Never, otherwise Kubernetes will try to download the image.
 
+## Enter inside running container
+
+```
+kubectl get pods
+```
+
+```
+kubectl exec -it <podname> -- /bin/bash
+```
+Individual commands
+```
+kubectl exec shell-demo ls /
+```
+
+ref https://kubernetes.io/docs/tasks/debug-application-cluster/get-shell-running-container/
